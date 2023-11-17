@@ -30,7 +30,7 @@ const DonationForm = () => {
     //MERCADO PAGO FUNCTIONS
     const createPreference = async () => {
         const headers = {
-            "Access-Control-Allow-Origin": "http://localhost:5173/"
+            "Access-Control-Allow-Origin": "*"
         };
         try {
             
