@@ -31,7 +31,7 @@ const DonationForm = () => {
     const createPreference = async () => {
         const headers = {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://patitas-callejeras-front.vercel.app/"
+            "Access-Control-Allow-Origin": "*"
           }
         try {
             
