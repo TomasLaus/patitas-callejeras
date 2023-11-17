@@ -54,6 +54,7 @@ const DonationForm = () => {
         try {
           const response = await fetch('https://patitas-callejeras-back.vercel.app/create_preference', {
             method: 'POST',
+            mode: 'no-cors',
             body: JSON.stringify({
               description: 'gracias por los cafecitos',
               price: totalAmount,
