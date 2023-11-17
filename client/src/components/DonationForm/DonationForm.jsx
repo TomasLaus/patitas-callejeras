@@ -34,7 +34,7 @@ const DonationForm = () => {
         };
         try {
             
-            const response = await axios.post('https://patitas-callejeras-back.vercel.app/create_preference', {headers},
+            const response = await axios.post('https://patitas-callejeras-back-cxcmsby8y-tomaslaus.vercel.app/create_preference', {headers},
             {
                 description: 'gracias por los cafecitos',
                 price: totalAmount,
