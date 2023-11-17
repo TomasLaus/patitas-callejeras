@@ -52,13 +52,14 @@ const DonationForm = () => {
 
     const createPreference = async () => {
         const headers = {
-          'Access-Control-Allow-Origin': ['*'],
+          'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
           'Access-Control-Allow-Headers': 'Content-Type'
         };
         try {
           const response = await fetch('https://patitas-callejeras-back-5sa2we643-tomaslaus.vercel.app/create_preference', {
             method: 'POST',
+
             headers: headers,
             body: JSON.stringify({
               description: 'gracias por los cafecitos',

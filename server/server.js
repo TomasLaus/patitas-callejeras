@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 require('dotenv').config()
 const mercadopago = require("mercadopago");
+app.use(cors());
 
 
 
@@ -22,7 +23,6 @@ app.use(function(req, res, next) {
 });  
 
 
-app.use(cors());
 
 
 app.get("/", function (req, res) {
