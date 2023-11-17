@@ -16,7 +16,7 @@ mercadopago.configure({
 
 app.use(cors());
 app.use(function(req, res, next) {
-    res.append('Access-Control-Allow-Origin', ['*', 'https://patitas-callejeras-back.vercel.app/']);
+    res.append('Access-Control-Allow-Origin', '*');
     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.append('Access-Control-Allow-Headers', 'Content-Type');
     next();
