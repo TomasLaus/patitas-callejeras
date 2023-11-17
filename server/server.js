@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 require('dotenv').config()
 const mercadopago = require("mercadopago");
-app.use(cors());
 
 
 
@@ -15,6 +14,7 @@ mercadopago.configure({
 });
 
 
+app.use(cors());
 app.use(function(req, res, next) {
     res.append('Access-Control-Allow-Origin', ['*']);
     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
