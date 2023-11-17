@@ -28,7 +28,7 @@ app.get("/", function (req, res) {
 	res.status(200).send("server funcionando");
 });
 
-app.post("https://patitas-callejeras-back.vercel.app/create_preference", (req, res) => {
+app.post("/create_preference", (req, res) => {
 
 	let preference = {
 		items: [
@@ -56,7 +56,7 @@ app.post("https://patitas-callejeras-back.vercel.app/create_preference", (req, r
 		});
 });
 
-app.get('https://patitas-callejeras-back.vercel.app/feedback', function (req, res) {
+app.get('/feedback', function (req, res) {
 	res.json({
 		Payment: req.query.payment_id,
 		Status: req.query.status,
