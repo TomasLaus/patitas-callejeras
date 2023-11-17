@@ -29,44 +29,44 @@ const DonationForm = () => {
     
     //MERCADO PAGO FUNCTIONS
 
-    const createPreference = async () => {
-        const headers = {
-            'Access-Control-Allow-Origin': ['*'],
-            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
-            'Access-Control-Allow-Headers': 'Content-Type'
-          }
-        try {
-            
-            const response = await axios.post('https://patitas-callejeras-back-oymdo79hy-tomaslaus.vercel.app/create_preference', headers,
-            {
-                description: 'gracias por los cafecitos',
-                price: totalAmount,
-                quantity: 1
-            });
-
-            const { id } = response.data;
-            return id;
-        } catch (error) {
-            console.log(error);
-        }
-    }
     // const createPreference = async () => {
+    //     const headers = {
+    //         'Access-Control-Allow-Origin': ['*'],
+    //         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+    //         'Access-Control-Allow-Headers': 'Content-Type'
+    //       }
     //     try {
-    //       const response = await fetch('https://patitas-callejeras-back.vercel.app/create_preference', {
-    //         method: 'POST',
-    //         body: JSON.stringify({
-    //           description: 'gracias por los cafecitos',
-    //           price: totalAmount,
-    //           quantity: 1
-    //         })
-    //       });
-    //       const data = await response.json();
-    //       const { id } = data;
-    //       setPreferenceId(id);
+            
+    //         const response = await axios.post('https://patitas-callejeras-back-oymdo79hy-tomaslaus.vercel.app/create_preference', headers,
+    //         {
+    //             description: 'gracias por los cafecitos',
+    //             price: totalAmount,
+    //             quantity: 1
+    //         });
+
+    //         const { id } = response.data;
+    //         return id;
     //     } catch (error) {
-    //       console.log(error);
+    //         console.log(error);
     //     }
-    // };
+    // }
+    const createPreference = async () => {
+        try {
+          const response = await fetch('https://patitas-callejeras-back.vercel.app/create_preference', {
+            method: 'POST',
+            body: JSON.stringify({
+              description: 'gracias por los cafecitos',
+              price: totalAmount,
+              quantity: 1
+            })
+          });
+          const data = await response.json();
+          const { id } = data;
+          setPreferenceId(id);
+        } catch (error) {
+          console.log(error);
+        }
+    };
     
 
     const handleBuy = async () => {
