@@ -30,10 +30,14 @@ const DonationForm = () => {
     //MERCADO PAGO FUNCTIONS
 
     const createPreference = async () => {
-
+        const headers = {
+            'Access-Control-Allow-Origin': ['*'],
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+            'Access-Control-Allow-Headers': 'Content-Type'
+          }
         try {
             
-            const response = await axios.post('https://patitas-callejeras-back-oymdo79hy-tomaslaus.vercel.app/create_preference',
+            const response = await axios.post('https://patitas-callejeras-back-oymdo79hy-tomaslaus.vercel.app/create_preference', headers,
             {
                 description: 'gracias por los cafecitos',
                 price: totalAmount,
