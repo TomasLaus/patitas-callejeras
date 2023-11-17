@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-    '/api': {
+    '/server': {
       target: 'https://patitas-callejeras-back.vercel.app',
       changeOrigin: true,
       secure: false,
