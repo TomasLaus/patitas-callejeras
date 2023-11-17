@@ -52,7 +52,7 @@ const DonationForm = () => {
 
     const createPreference = async () => {
         const headers = {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'https://patitas-callejeras-back.vercel.app/',
           'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
           'Access-Control-Allow-Headers': 'Content-Type'
         };
